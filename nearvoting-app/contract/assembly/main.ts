@@ -13,9 +13,6 @@ function _getVotingInfo(): Voting | null {
 }
 
 // Allows users to create new voting
-// Don't check user permissions so anyone can create
-// It's convenient that other people can run the contract as well.
-// But for real implementation, you have to check the permissions, only the owner has the right to create votes
 export function createVoting(content: string): bool {
     // Checking
     assert(content, "You must enter the content!");
@@ -25,7 +22,6 @@ export function createVoting(content: string): bool {
     }
     
     // Create new vote and store into blockchain
-    // The id of the vote is its position in the array
     let id = votingInfos.length;
     let item = new Voting(id, Context.sender, content);
     item.startVote();                                       // Reduce action for users
@@ -85,7 +81,7 @@ export function endVote(): bool {
     return true;
 }
 
-// Users vote for their favorite option
+// Users vote for their preffered option
 export function vote(optionId: i32): bool {
     let currVote = _getVotingInfo();
     assert(currVote!=null, "There is no voting!");
