@@ -3,6 +3,10 @@
 This project is created for Patika&Near Developer Course. This is an basic voting app which is under development. 
 
 
+https://user-images.githubusercontent.com/88032689/165583287-d61dc7e2-560f-44ba-82ba-72ff99980cfe.mp4
+
+
+
 **Aim of the Project:**
 
 This project aims to create decentralization for voting data. Therefore it is an online voting app connected to the Near platform. 
